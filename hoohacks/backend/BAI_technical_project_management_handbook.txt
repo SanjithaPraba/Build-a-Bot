@@ -1,0 +1,99 @@
+
+Technical Project Management Handbook (Structured for RAG)
+===========================================================
+
+This handbook provides a week-by-week guide for technical project leads managing student teams through a semester-long sprint-driven development project.
+
+-------------------------------
+SPRINT 0 (Jan 6 - Jan 13): Preparation
+-------------------------------
+- Create a full 12-week sprint outline
+- Set up a single Google Sheet with:
+    • 12-week Sprint Schedule
+    • Task Backlog & Sprint Progress Board
+- Backwards-plan from final deliverable, set conservative sprint goals
+- Begin populating backlog (even with only 1-2 sprints' worth of tasks)
+- Encourage teams to self-assign tasks into "In Progress" column
+- Clarify with client:
+    • Understand costs (e.g., LLM usage)
+    • Gather needed materials early (e.g., datasets)
+    • Agree on communication frequency
+    • Ask about required tech stack
+
+-------------------------------
+SPRINT 1 (Jan 13 - Jan 27): Project Kickoff
+-------------------------------
+- Launch communication:
+    • Group chat
+    • Introductory meeting to align expectations
+    • Encourage early sharing of blockers
+    • Weekly hour commitment: 3–5 hrs/week
+    • Set async stand-up schedule (1–2 updates/week)
+- Promote ticket independence and collaboration
+- Expect real progress during this sprint
+- Complete Sprint Retro & Planning doc before next all-hands
+    • Upload to team folder: “Sprint [#]: [TEAM NAME]”
+
+-------------------------------
+SPRINT 2 (Jan 27 - Feb 10): Building Momentum
+-------------------------------
+- Attend all-hands on Day 1: demo progress and show completed tickets
+- Ensure team is working toward final deliverable
+- Mid-sprint check-in (Day 8): claim tickets, escalate blockers early
+- End-of-sprint team retro: complete and upload Sprint Retro & Planning doc
+- Send client a progress update
+
+-------------------------------
+SPRINTS 3–6: Repeat Sprint Cycle
+-------------------------------
+Sprint 3: Feb 10 – Feb 24  
+Sprint 4: Feb 24 – Mar 7 (ends early for spring break, standup on Mar 6)  
+Sprint 5: Mar 17 – Mar 31  
+Sprint 6: Mar 31 – Apr 14
+
+-------------------------------
+Week 13 (Apr 14 - Apr 18): Symposium Prep
+-------------------------------
+- Finalize deliverables and slidedeck
+- Practice team presentation (8–10 minutes)
+- Prepare talking points and align with BA
+
+-------------------------------
+Week 14 (Tentative Apr 22): Symposium Presentation
+-------------------------------
+- Business attire required
+- Attendees: clients, sponsors, UVA faculty, Big Tech employees
+- Format:
+    • Networking cocktail hour
+    • Keynote speech
+    • Team presentations
+    • Audience voting
+    • Recognition of team leads and execs
+
+-------------------------------
+CORE EXPECTATIONS
+-------------------------------
+- 12-week sprint tracker must be consistently updated
+- Teams should:
+    • Continuously populate backlog
+    • Meet 3–5 hrs weekly ticket work per member
+    • Report blockers before meetings
+    • Attend biweekly retros and all-hands
+    • Present regularly during standups
+
+-------------------------------
+TOOLS & LINKS
+-------------------------------
+- Sprint Planner & Backlog Tracker Template (Google Sheet)
+- Sprint Retro & Planning Doc (Google Doc)
+- Submission Folder:
+    https://drive.google.com/drive/folders/1CsgAjapmz9cdYgqwHpJd_j9eB_uiADwK?usp=sharing
+
+-------------------------------
+PL ADVICE CORNER
+-------------------------------
+- Start with heavy effort to build trust and demonstrate buy-in
+- Assign early tasks to show faith in team members
+- Balance trust and accountability through one-on-ones
+- Foster a culture of openness and feedback
+- Build friendships with teammates to increase motivation and transparency

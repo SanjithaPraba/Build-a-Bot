@@ -44,7 +44,7 @@ class QueryState(BaseModel):
 
 # Step 1: Create and store embeddings from a .txt file
 def create_and_store_embedding(state: QueryState):
-    file_path = "faq.txt"
+    file_path = "BAI_technical_project_management_handbook.txt"
 
     if not os.path.exists(file_path):
         logger.error(f"FAQ file not found at {file_path}")
