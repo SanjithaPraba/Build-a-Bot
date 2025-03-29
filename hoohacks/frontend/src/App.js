@@ -1,51 +1,40 @@
 import React, { useState } from "react";
 
 function App() {
-  // State for user input and results
   const [description, setDescription] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [useCustomBot, setUseCustomBot] = useState(false);
+  const [uploadFile, setUploadFile] = useState(null);
 
-  // Function to send description to Flask backend
   const handleSearch = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError("");
-    setResults([]); // Clear previous results
+    setResults([]);
 
     try {
-      console.log("Sending request to backend with description:", description);
-
-      // First, test the connection
-      try {
-        const testResponse = await fetch("http://localhost:5001/test");
-        if (!testResponse.ok) {
-          throw new Error("Backend server is not responding");
-        }
-      } catch (error) {
-        console.error("Connection test failed:", error);
-        throw new Error("Could not connect to the server. Please make sure the backend is running on port 5001.");
+      const testResponse = await fetch("http://localhost:5001/test");
+      if (!testResponse.ok) {
+        throw new Error("Backend server is not responding");
       }
 
       const response = await fetch("http://localhost:5001/process", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json"
+          Accept: "application/json",
         },
         body: JSON.stringify({ description }),
       });
 
-      console.log("Response status:", response.status);
-      
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
         throw new Error(errorData.error || `Server error: ${response.status}`);
       }
 
       const data = await response.json();
-      console.log("Raw response data:", data);
 
       if (!data || !data.results) {
         throw new Error("Invalid response format from server");
@@ -53,7 +42,6 @@ function App() {
 
       setResults(data.results);
     } catch (error) {
-      console.error("Detailed error:", error);
       setError(error.message);
     } finally {
       setLoading(false);
@@ -62,21 +50,67 @@ function App() {
 
   return (
     <div style={styles.container}>
-      {/* Animated Background Shapes */}
       <div style={styles.floatingShape1}>❓</div>
       <div style={styles.floatingShape2}>🤖</div>
       <div style={styles.floatingShape3}>💡</div>
 
       <div style={styles.headingOverlay}>
-        <h1 style={styles.mainHeading}> Build-a-BOT</h1>
+        <h1 style={styles.mainHeading}>Build-a-BOT</h1>
         <h2 style={styles.subHeading}>Ask anything about your organization 🔍</h2>
+
+        <div style={{ margin: "10px 0" }}>
+          <label>
+            <input
+              type="checkbox"
+              checked={useCustomBot}
+              onChange={() => setUseCustomBot(!useCustomBot)}
+            />{" "}
+            Use my own uploaded .txt file
+          </label>
+        </div>
+
+        {useCustomBot && (
+          <div
+            style={{
+              marginBottom: "1.5rem",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <input
+              type="file"
+              accept=".txt"
+              onChange={(e) => setUploadFile(e.target.files[0])}
+              style={{ marginBottom: "0.5rem" }}
+            />
+            <button
+              style={styles.button}
+              onClick={async () => {
+                if (!uploadFile) return alert("Please upload a .txt file first.");
+                const formData = new FormData();
+                formData.append("file", uploadFile);
+                const res = await fetch("http://localhost:5001/upload", {
+                  method: "POST",
+                  body: formData,
+                });
+                if (res.ok) {
+                  alert("✅ File uploaded successfully! You can now ask your bot.");
+                } else {
+                  alert("❌ Upload failed.");
+                }
+              }}
+            >
+              Upload File
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* Question Form */}
       <form onSubmit={handleSearch} style={styles.form}>
         <input
           type="text"
-          placeholder="e.g. How do I become a member?"
+          placeholder={useCustomBot ? "Ask your uploaded bot..." : "e.g. How do I become a member?"}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           style={styles.input}
@@ -93,7 +127,6 @@ function App() {
         </div>
       )}
 
-      {/* Response */}
       {results.length > 0 && (
         <div style={styles.resultsContainer}>
           <h2 style={styles.resultsHeading}>Answer</h2>
@@ -110,7 +143,6 @@ function App() {
   );
 }
 
-// 🔮 Updated CSS styles
 const styles = {
   container: {
     position: "relative",
@@ -230,7 +262,6 @@ const styles = {
     fontSize: "13px",
     margin: 0,
   },
-  // Floating shapes
   floatingShape1: {
     position: "absolute",
     top: "10%",
