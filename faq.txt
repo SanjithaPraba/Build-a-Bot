@@ -1,19 +1,70 @@
-What is a Hackathon?
-A hackathon is a 24-hour tech event for teams of students to learn new skills, build cool tech projects, and meet tons of other students and tech professionals. There will be food, awesome workshops, and super cool swag for all hackers!
+HooHacks: Virginia's Premier Hackathon
 
-How much will it cost?
-There is absolutely no cost for attending our hackathon! We will provide all the resources for you to participate comfortably.
+HooHacks is a student-run organization at the University of Virginia (UVA) dedicated to fostering a vibrant hacker community. As Virginia's largest hackathon and one of the top 50 collegiate hackathons in the United States, HooHacks aims to make learning and utilizing software development more accessible and enjoyable for students.
 
-Do I need a team?
-If you are planning to compete for a prize, you may be in a team of 1–4 people. If you don’t have one yet, no worries! We will have a team formation workshop before hacking begins.
+Mission and Core Values:
 
-Who can attend?
-All current undergraduate, graduate, and high school students at least 18 years of age may attend HooHacks. No coding experience is necessary! Non-STEM majors, first-time hackers, and beginner coders are encouraged to join us!
+1. Inclusivity – Welcoming participants from diverse backgrounds and skill levels.
+2. Learning – Providing opportunities for students to acquire new skills and knowledge.
+3. Ethics – Encouraging responsible and ethical innovation.
+4. Experience – Ensuring a valuable, memorable, and fun hackathon experience.
 
-What are the logistics?
-HooHacks 2025 will be taking place at the University of Virginia. Information regarding schedule of events and more are coming soon!
+Event Details:
 
-HooHacks will also be offering travel reimbursement this year! More information on our travel reimbursement policies can be found here: [link]
+- Date: March 29–30, 2025
+- Location: University of Virginia, School of Engineering and Applied Sciences, Charlottesville, VA
+- Duration: 24-hour hackathon
+- Cost: Free to attend
+- Eligibility: Open to all undergraduate, graduate, and high school students aged 18 or older. No prior experience required.
 
-Have more questions?
-Feel free to contact us at team@hoohacks.io or message us on Instagram @hoohacks if you have any questions, concerns, or feedback. More information on general MLH guidelines can be found here: [link]
+What’s Offered:
+
+- Workshops and Tech Talks: Led by students and professionals across a variety of topics.
+- Mentorship: One-on-one help from mentors throughout the event.
+- Networking: Meet with sponsors, recruiters, and other hackers.
+- Prizes: Over $10,000 in prizes, including Macs, iPads, and MetaQuests.
+- Free Food and Swag: Meals and exclusive merch provided.
+
+FAQs:
+
+Q: Who can attend?
+A: Any current undergraduate, graduate, or high school student who is 18 or older.
+
+Q: Do I need coding experience?
+A: Not at all! Beginners are welcome.
+
+Q: How much does it cost?
+A: HooHacks is completely free.
+
+Q: Is there travel reimbursement?
+A: Yes, travel reimbursement is available. More info is on the website.
+
+Q: What should I bring?
+A: A laptop, charger, valid student ID, and anything else you need to hack comfortably.
+
+Q: Can I use an old project?
+A: No. All projects must be started and completed during the hackathon.
+
+Q: How do teams work?
+A: You can bring a team or form one at the event during team-matching sessions.
+
+Q: Can I participate alone?
+A: Yes! You’ll have opportunities to join a team or continue solo.
+
+Q: Are there prizes?
+A: Yes, over $10,000 worth of prizes including tech gear.
+
+Q: Will there be food?
+A: Yes, all meals and snacks are provided for free.
+
+Q: Is there a code of conduct?
+A: Yes, all participants are expected to follow our respectful and inclusive code of conduct.
+
+Contact Info:
+
+- Website: https://www.hoohacks.io/
+- Email: team@hoohacks.io
+- LinkedIn: https://www.linkedin.com/company/hoohacks
+- Instagram: https://www.instagram.com/hoohacks/
+- Twitter: https://x.com/hoohacks
+- Facebook: https://www.facebook.com/hoohacks/
