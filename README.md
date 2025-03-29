@@ -1,1 +1,1 @@
-This is Kush Singhai, Sanjitha Prabakaran, Harshit Gowrisetty
+This is Kush Singhai, Sanjitha Prabakaran, Harshith Gowrisetty
