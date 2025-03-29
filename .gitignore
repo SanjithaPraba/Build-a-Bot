@@ -1,3 +1,4 @@
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -63,25 +64,20 @@ test-results/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# PyCharm
+# IDEs
 .idea/
-
-# VS Code
 .vscode/
 
-# Mac
+# OS files
 .DS_Store
 
 # Logs
 *.log
 
-# Local env files
+# Local environment variables
 .env
 .env.*
 
-# Ignore data and model folders if applicable
-data/
-models/
+# Local embedding files
+hoohacks/backend/local_embeddings.pkl
 *.pkl
-*.db
-*.sqlite3
