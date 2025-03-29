@@ -1,70 +1,886 @@
-HooHacks: Virginia's Premier Hackathon
+HOOHACKS
+Vol. 2025
 
-HooHacks is a student-run organization at the University of Virginia (UVA) dedicated to fostering a vibrant hacker community. As Virginia's largest hackathon and one of the top 50 collegiate hackathons in the United States, HooHacks aims to make learning and utilizing software development more accessible and enjoyable for students.
+Table of Contents
+01
 
-Mission and Core Values:
 
-1. Inclusivity – Welcoming participants from diverse backgrounds and skill levels.
-2. Learning – Providing opportunities for students to acquire new skills and knowledge.
-3. Ethics – Encouraging responsible and ethical innovation.
-4. Experience – Ensuring a valuable, memorable, and fun hackathon experience.
+Sponsors - pg. 1
 
-Event Details:
+02
 
-- Date: March 29–30, 2025
-- Location: University of Virginia, School of Engineering and Applied Sciences, Charlottesville, VA
-- Duration: 24-hour hackathon
-- Cost: Free to attend
-- Eligibility: Open to all undergraduate, graduate, and high school students aged 18 or older. No prior experience required.
 
-What’s Offered:
 
-- Workshops and Tech Talks: Led by students and professionals across a variety of topics.
-- Mentorship: One-on-one help from mentors throughout the event.
-- Networking: Meet with sponsors, recruiters, and other hackers.
-- Prizes: Over $10,000 in prizes, including Macs, iPads, and MetaQuests.
-- Free Food and Swag: Meals and exclusive merch provided.
+Helpful Links and Schedule - pg. 7
 
-FAQs:
+03
 
-Q: Who can attend?
-A: Any current undergraduate, graduate, or high school student who is 18 or older.
 
-Q: Do I need coding experience?
-A: Not at all! Beginners are welcome.
 
-Q: How much does it cost?
-A: HooHacks is completely free.
+Founder’s Fair- pg. 8
 
-Q: Is there travel reimbursement?
-A: Yes, travel reimbursement is available. More info is on the website.
+03
 
-Q: What should I bring?
-A: A laptop, charger, valid student ID, and anything else you need to hack comfortably.
 
-Q: Can I use an old project?
-A: No. All projects must be started and completed during the hackathon.
 
-Q: How do teams work?
-A: You can bring a team or form one at the event during team-matching sessions.
+What to Bring - pg. 11
 
-Q: Can I participate alone?
-A: Yes! You’ll have opportunities to join a team or continue solo.
+04
 
-Q: Are there prizes?
-A: Yes, over $10,000 worth of prizes including tech gear.
 
-Q: Will there be food?
-A: Yes, all meals and snacks are provided for free.
 
-Q: Is there a code of conduct?
-A: Yes, all participants are expected to follow our respectful and inclusive code of conduct.
+Maps - pg. 12
 
-Contact Info:
+05
 
-- Website: https://www.hoohacks.io/
-- Email: team@hoohacks.io
-- LinkedIn: https://www.linkedin.com/company/hoohacks
-- Instagram: https://www.instagram.com/hoohacks/
-- Twitter: https://x.com/hoohacks
-- Facebook: https://www.facebook.com/hoohacks/
+
+
+Free Resource + Hardware - pg. 14
+
+06
+
+
+
+Workshop Downloads - pg. 17
+
+07
+
+
+
+FAQ - pg. 19
+
+08
+
+
+
+Reimbursements + Raffle - pg. 20
+
+01
+Sponsors
+
+Partners
+
+01
+
+02
+Sponsors
+CoStar Group
+CoStar Group is a leading provider of commercial real
+estate information, analytics, and online marketplaces.
+From investment decisions to property management,
+CoStar Group's comprehensive solutions empower
+professionals to make informed choices and drive
+success. Learn more at the hackathon about the world of
+commercial real estate and uncover how CoStar Group is
+redefining the landscape.
+
+
+
+UVA Honor
+The University of Virginia’s Honor Committee —the
+Committee representatives elected from every school,
+the trained support officers who staff cases,
+individuals who report offenses—exists for a single
+purpose: to uphold and support the Community of Trust.
+We believe that students, faculty, and administrators
+are not passive recipients of culture, but rather are
+active agents in creating and maintaining the ideals of
+our community. As students at the University of
+Virginia, we have made the conscious decision to not
+let personal gain, ambition, or future advancement
+become the defining characteristics of our years at
+this university. Instead, we seek to conduct ourselves
+with integrity, respecting the work and property of our
+fellow students and the wisdom of our professors. We
+aim to cultivate habits that will inform our work
+habits long after we graduate; to assume the best in
+each other; and to hold fast to notions of right and
+wrong, even when doing so comes at personal cost.
+Through this collective effort, our ultimate end is to
+live and work in a Community of Trust, where honesty
+and mutual respect are the baseline for all our
+interactions and academic endeavors
+
+
+
+03
+Sponsors (cont.)
+Kyrus Tech
+Kyrus-SIXGEN provides world-class cybersecurity
+services and products to protect government
+organizations and commercial industries. Our highly
+skilled operators conduct research and assessments
+based on real-world threats. We emulate global
+adversaries and malicious actors to report detailed and
+actionable findings on critical assets and
+infrastructures. Using innovative processes, tools, and
+advanced techniques, we predict and overcome
+cybersecurity vulnerabilities. Kyrus-SIXGEN prioritizes
+security best practice, customer requirements and
+privacy, and overall mission impact. We look forward to
+welcoming new interns in 2026!
+
+
+
+UVA School of Data Science
+The University of Virginia School of Data Science—
+the first of its kind in the nation—is guided by
+common goals: to further discovery, share
+knowledge, and make a positive impact on society
+through collaborative, open, and responsible data
+science research and education. Founded in fall
+2019 through the largest gift in UVA history, the
+School positions the university and our community
+to play a national and international leadership
+role in the global digital future. To learn more
+about our School and academic programs, visit
+https://datascience.virginia.edu/.
+
+
+
+University Programs Council (UPC)
+The University Programs Council (UPC) at UVA is a
+student-run organization that funds and organizes
+events to enhance campus life. Through its budget
+and grants, UPC supports student clubs in hosting
+activities and planning large-scale events. From
+concerts and movie nights to cultural celebrations,
+their funding helps create engaging and inclusive
+experiences for the student body. 
+
+3 Student Affairs
+
+04
+
+Sponsors (cont.)
+UVA SustainableIT
+UVA’s Office for Sustainability and the UVA
+Sustainable IT working group is pleased to sponsor a
+$1000 prize for the hack that best demonstrates
+elements sustainability. The UVA Sustainability
+mission calls for ingenuity and inclusivity to
+promote the wellbeing of the community, solve local
+and global challenges through scholarship and
+practice, educate ethical leaders and steward this
+special place, the nation’s only university
+designated a UNESCO World Heritage site. UVA’s 2030
+Sustainability Plan goals (see image below) include
+numerous goals that focus on the areas of
+stewardship, engagement and discovery including
+reducing UVA’s carbon footprint and reliance on
+fossil fuels
+reducing waste to 30% of 2010 levels
+reducing reactive nitrogen losses to 30% of 2010
+levels
+increasing sustainable food utilization by 30%
+reducing water usage by 30%
+building accountability and advancing equitable
+places, an
+enhancing Sustainability teaching, research and
+learning.
+
+
+The Office for Sustainability and Sustainable IT
+working group are always looking for passionate and
+engaged contributors who want to help UVA advance
+sustainability. Check out our website to learn more!
+(https://sustainability.virginia.edu and https://
+sustainableit.virginia.edu)
+
+
+
+05
+
+Sponsors (cont.)
+UVA McIntire School of Commerce
+The McIntire School of Commerce’s Center for
+Business Analytics (CBA) is a nexus for the focused
+exploration of data and its application to inform
+business decisions through academic research,
+industry engagement and collaboration, curriculum
+innovation, and professional outreach.
+
+Through
+
+partnerships between faculty, students, and our
+corporate members, the CBA advances McIntire’s
+thought leadership and recruiting opportunities in
+business analytics.
+
+
+
+IBM
+IBM’s greatest invention is the IBMer. We believe
+that through the application of intelligence, reason
+and science, we can improve business, society and
+the human condition, bringing the power of an open
+hybrid cloud and AI strategy to life for our clients
+and partners around the world. Restlessly
+reinventing since 1911, we are not only one of the
+largest corporate organizations in the world, we’re
+also one of the biggest technology and consulting
+employers, with many of the Fortune 50 companies
+relying on the IBM Cloud to run their business. At
+IBM, we pride ourselves on being an early adopter of
+artificial intelligence, quantum computing and
+blockchain. Now it’s time for you to join us on our
+journey to being a responsible technology innovator
+and a force for good in the world.
+
+
+
+The Office of the Vice President and
+Chief Student Affairs
+Officer at UVA oversees Student Affairs, providing
+essential funding and resources to support student
+organizations and initiatives. Through grants,
+leadership programs, and operational support, they
+help student clubs thrive and enhance campus
+engagement. Their funding enables events, wellness
+initiatives, and community-building efforts that
+enrich student life. 
+
+
+
+
+06
+
+Sponsors (cont.)
+UVA Parents Program
+The UVA Parents Program plays a key role in funding
+student activities and enhancing the student
+experience by supporting clubs and organizations.
+Through fundraising efforts, including the Parents
+Fund, they provide grants that help student groups
+host events and broaden their CIO’s horizons. This
+financial support enables a diverse range of
+extracurricular opportunities, from cultural clubs
+to service initiatives. 
+
+
+
+UVA’s Darden School of Business
+The Batten Institute at UVA’s Darden School of
+Business supports innovation and entrepreneurship
+through funding, programs, and mentorship. They
+offer grants, incubators, and resources to help
+students launch ventures and lead impactful
+initiatives. By fostering entrepreneurial thinking,
+the institute enhances experiential learning and
+business innovation at UVA.
+
+
+02
+
+Helpful Links and 
+
+Schedule
+Links
+
+HooHacks App:
+
+https://app.hoohacks.io/
+
+
+
+HooHacks Devpost: 
+
+https://hoohacks-2025.devpost.com/
+
+
+
+Discord (*): 
+
+https://discord.gg/hp4DDspQSS
+
+
+
+Instagram (*):
+
+https://www.instagram.com/hoohacks/
+
+
+
+HooHacks Website: 
+
+https://hoohacks.io
+
+
+
+HooHacks LinkedIn:
+
+https://www.linkedin.com/company/hoohacks
+
+
+
+(*) - Make sure you join + follow these to stay
+
+updated during HooHacks!
+
+Schedule
+
+HooHacks Schedule:
+
+https://app.hoohacks.io
+
+Software that you will need
+Discord:
+
+https://discord.com/download
+
+07
+
+03
+
+Founders Fair
+Interested in tech, business, and startups?
+
+Come check out the Founders Fair at HooHacks — a brand
+new opportunity to connect directly with MBA students
+from UVA’s top-ranked Darden School of Business, home
+to future entrepreneurs and business leaders.
+
+These Darden founders are building real companies—and
+they’re looking for software engineers, developers, and
+product-minded students to join their missions. Whether
+you want to launch your own venture, work at an earlystage startup, or just explore how software meets
+strategy, this is your space to learn, connect, and
+explore new career paths.
+
+
+Thinking about pivoting from engineering to
+entrepreneurship?
+
+The Founders Fair is a great way to get inspired by
+those who’ve done exactly that. You'll hear from MBAs
+who’ve blended tech skills with business vision—and
+discover how you can do the same. If you're curious
+about product management, startups, or business
+leadership roles, this is an incredible place to start
+making that shift.
+
+
+Note: This is not the Sponsorship Fair. Come with a
+business and startup mindset—ready to network, ask
+questions, and think big.
+
+
+We also encourage you to check out the Darden School of
+Business and the Batten Institute for Entrepreneurship,
+Innovation, and Technology, two powerful communities at
+UVA shaping the future of business and innovation.
+
+
+
+Come to the HooHacks Founders Fair for the opportunity
+to network with the founders of Memorial Tribute
+Legacy, Erebus, TasteBuds, Altura Jewelry, Remeo, and
+VuGru! Connect with builders in the UVA community,
+learn more about how to take ventures to the next
+level, and connect with these founders for internship
+opportunities!
+
+08
+
+03
+
+Founders Fair (cont.)
+Memorial Tribute Legacy
+
+Memorial Tribute Legacy (MTL) is redefining the way
+people honor and remember those who pass away by
+integrating durable QR code plaques with interactive
+digital memorials. MTL seeks to digitize the memorial
+space and bring nostalgic joy. Traditional
+memorialization—such as gravestones and obituaries—
+fails to capture the depth of a person’s life story.
+MTL provides an innovative, tech-enabled solution
+that allows Loved Ones – family, friends, and
+community – to create evolving, multimedia containing
+photo and video memorials that are accessible
+anytime, anywhere.
+
+Erebus
+
+Erebus's goal is to increase the success of products
+by focusing on the testing phase of software
+development.
+
+TasteBuds
+TasteBuds is a social dining app that helps users
+track, organize, and share restaurant experiences
+with friends — cutting through the clutter of
+anonymous reviews. The app is designed with clean UX,
+Firebase backend, and a focus on helping users easily
+remember and share their favorite spots.
+
+
+Internship Opportunity: TasteBuds is currently
+looking for a coder to help bring the MVP to life —
+ideally someone who can build in Flutter or in iOS
+and Dart.
+
+Altura Jewelry
+
+Altura is a jewelry brand that helps young
+professionals to effortlessly level up their daily
+outfit everyday
+
+
+Opportunity: Looking for emerging talent to increase
+brand visibility.
+
+09
+
+03
+
+Founders Fair (cont.)
+Remeo
+
+Remeo is an AI assistant for project management.
+Remeo attentively listens to conversations happening
+within group chats, just like a dedicated team member
+keeping their ear to the ground. It diligently
+updates trackers, reminds everyone about important
+deadlines and raises alerts when potential problems
+arise, and generates client-ready snapshot reports,
+presenting project progress in a professional format.
+
+Remeo is like having an always-available, highly
+organized, and communicative project team member, but
+in AI form.
+
+
+Internship Opportunity: Remeo is seeking interns of
+AI Engineer, Software Engineer, and Product Manager
+to help craft the first version of our product and
+deliver an exceptional experience that wows their
+customers.
+
+VuGru
+
+VuGru is a project management and collaboration
+platform designed for photographers and videographers
+working on real estate media. It streamlines
+communication, asset delivery, and scheduling between
+creative professionals and real estate agents. We’re
+also exploring AI video generation features that can
+turn house photos into listing videos, helping agents
+market properties faster and more effectively. You
+can check out our website at vugru.com.
+
+
+Internship Opportunity: VuGru is seeking software
+development help
+
+10
+
+04
+What to Bring
+Essentials
+
+Sleeping Material
+Sleeping Bag, Pillows, Blanket
+Identification School ID, Driver’s License, etc.
+Your ID must include your full name (no
+initials) and a recent photo. Accepted forms of
+ID include government ID (e.g. Driver’s License,
+passport, etc). International students who study
+in the USA may bring a valid school ID
+Reusable Water Bottle
+Laptop, Phone, and Charger
+Headphone
+Hygiene Essential
+Deodorant, Toothbrush, etc
+Dongles/Adapter
+Any hardware you want for your project
+
+Nice to Have
+
+Change of Clothe
+Surge Protecto
+Raincoat/Umbrella check the weather in Cville!
+Resume Printouts
+
+11
+
+05
+
+Maps
+You will be able to find what building each activity is
+happening in during HooHacks, as well as parking space,
+in the following maps. Please check app.hoohacks.io and
+the Discord for the most up-to-date information on
+event locations.
+
+HooHacks Venue
+Parking
+Full UVA Visitor Parking Lot map can be found here.
+HooHacks participants may park in E3 lots.
+A detailed and larger map of the HooHacks venue is
+listed on the next page. A full comprehensive list
+of activities and location can be found on the
+schedule at app.hoohacks.io
+
+12
+
+Detailed Venue Overview
+
+Chemistry Building
+Check-In and Opening Ceremon
+Closing Ceremony
+Rice Hall
+Judging
+Organizer Help Desk
+Saturday 11 PM - Sunday 8 AM
+Olsson Hall
+Organizer Help Desk (First floor entrance
+Saturday 10 AM - 11 PM & Sunday 8 AM - 6 PM
+Judging
+Mechanical Engineering Building
+Judging
+Thornton Hall
+Judging
+
+13
+
+06
+
+Free Resources + Hardware
+MLH Software Resources
+
+MLH provides a plethora of resources available to all
+hackers. For more information on all the resources
+available to you from MLH, check out: https://
+hack.mlh.io/software/
+
+
+Also, check your emails for more specific
+
+information from MLH!
+
+Hardware
+
+Our Inventory
+9 Raspberry Pi 4 B Ki
+2 Amazon Echo Dot
+3 Amazon Echo Sho
+8 Google Home Min
+12 Arduino (101 or Uno) + Base Shield Ki
+8 Leap Motio
+Tackle box of assorted small components/sensors
+that you can see the full details of here
+
+
+How Do You Check Out Hardware?
+
+Please contact an organizer at the Organizer Hub if
+you would like to check out hardware. You will need
+to provide some form of ID to an organizer or MLH
+representative to checkout the hardware you are
+borrowing and will receive the ID back once the
+hardware is returned. Hardware is limited, we
+recommend bringing anything you need for your project
+yourself.
+
+Balsalmiq
+Balsalmiq is providing hackers with a Balsalmiq Cloud
+promo code.
+
+
+For directions see: How Do I Redeem a Balsamiq Cloud
+Promo Code?
+
+
+Redemption Code: HOOHACKS2025
+
+14
+
+Perplexity AI
+We’re partnering with Perplexity to offer 6 months
+free Perplexity Pro to all HooHacks participants.
+
+Perplexity’s AI-powered search provides clear sources
+and citations for every answer. Hundreds of thousands
+of students around the world use Perplexity for
+research, studying and schoolwork.
+
+
+
+Perplexity is also great for hackathons. Check out
+this short video from the Perplexity team with a few
+tips to use Perplexity at HooHacks.
+
+
+
+With Perplexity Pro, you receive free API credits for
+the Sonar API, plus you can search 3x the sources,
+generate unlimited Deep Research reports, and use the
+latest AI models such as DeepSeek R1 and Claude 3.7
+Sonnet. This code will expire on March 31st, so
+please redeem it before then. Make sure to sign up
+with your university email to claim the offer.
+
+
+
+Perplexity Pro Redemption Link: https://
+www.perplexity.ai/?discount_code=FREEPPLXHOOHACKS25
+
+
+Roboflow
+Roboflow is a platform for building computer vision
+applications, making it easy for developers to go
+from idea to production. With tools for dataset
+management, annotation, model training, and
+deployment, Roboflow streamlines the entire computer
+vision workflow. Whether you're working with object
+detection, classification, or segmentation, Roboflow
+provides pre-trained models, easy integrations, and
+an intuitive interface to accelerate development of
+Visual AI projects. 
+
+
+
+Hackathon teams can leverage Roboflow to quickly
+prototype and deploy AI-powered projects without
+requiring a deep expertise in machine learning. Our
+no-code and API-driven tools allow you to upload
+images, train models, and deploy them to various
+environments, including the web, mobile, and edge
+devices. Roboflow's research plan gives teams the
+ability to build and deploy computer vision models
+for free.
+
+
+
+Redeem free credit instructions: https://
+roboflow.com/contribute#details-research
+
+15
+
+Wolfram
+
+Wolfram Research is pleased to sponsor your event by
+providing six months of access for all participants
+to our technology: Wolfram|One!
+
+
+The latest Wolfram technology stack makes it possible
+for you to develop and deploy useful applications in
+minutes.
+
+Alongside your access to Wolfram|One, you will also
+receive the Wolfram API, which allows you to connect
+to the massive computable database that powers
+Wolfram|Alpha.
+
+If you utilize the Wolfram Language in your project
+and post your project on Wolfram Community, you will
+be eligible for a $500 scholarship to one of our
+research-based summer programs if you apply and are
+offered a place.
+
+
+For complimentary access to our development platform
+and the Wolfram API, just click here:  
+
+https://account.wolfram.com/redeem/qzHooHacks325
+
+
+This URL will take you to a sign-in page and prompt
+you to log in using your Wolfram ID. If you don't
+already have a Wolfram ID, you'll be prompted to
+create one using an active email address. Once logged
+in, you will see in the Downloads section which
+platforms of the software you have access to, with
+their accompanying activation keys. Please download
+the desktop version to your machine, boot up the
+application and use the associated activation key
+when prompted. This will grant you full access for
+six months from your activation date.
+
+
+
+
+.xyz
+
+.xyz is proud to give .xyz domain names to
+participants of the HooHacks event because your
+
+big ideas deserve a platform that can help you
+broadcast them to the world. There are 350 licenses
+to give out, and it’s on a first come first serve
+basis!
+
+
+Redemption Code: HOO25
+
+
+16
+
+07
+
+Workshop Downloads
+If you plan on attending any of these workshops, please
+download the associated files or programs so that you
+will be ready to get started right away.
+
+Intro to Django Workshop
+
+Download Python here: 
+
+https://www.python.org/downloads/
+
+
+We recommend using VSCode, download it here:
+
+https://code.visualstudio.com/
+
+
+Follow the instructions in installing Django
+here: 
+
+https://docs.djangoproject.com/en/4.1/topics/
+install/#installing-official-release
+
+Intro to Git Workshop
+
+Download Git from here: 
+
+https://git-scm.com/downloads
+
+
+Intro to React
+
+Download Node.js here: 
+
+https://nodejs.org/en/download/
+
+
+We will go over code from both client-side and 
+
+server-side folders.
+
+
+
+We recommend using VSCode, download it here:
+
+https://code.visualstudio.com/
+
+
+
+In your IDE, open a new terminal and type 
+
+npx create-react-router@latest project-name
+You can put whatever project name you wan
+This will install React and all its dependencies
+
+17
+
+Game Development with Unity Engine
+Download Unity Hub Here:
+https://unity.com/download
+
+
+Once Unity Hub is downloaded, download the Unity Engine
+and Visual Studio from Unity Hub.
+
+Intro to CTFs and Web Exploitation with MetaCTF
+The competition will be available at https://mctf.io/
+hoohacks25 
+
+
+Materials:
+If you like to come prepared, check out the brief guide
+at https://metactf.com/prep
+
+18
+
+07
+FAQ
+
+Where is HooHacks?
+
+HooHacks will take place across Engineer’s Way at
+UVA. We will have events take place in Rice Hall,
+Olsson Hall, Thornton Hall, the Mechanical
+Engineering Building, and the Chemistry Building.
+
+
+Where can I park?
+
+See page 12 for information on where to park.
+
+What should I bring?
+
+See page 11 for information on what to bring.
+
+Do I need a team?
+
+If you are planning to compete for a prize, you may
+be in a team of 1-4 people. If you don't have one
+yet, no worries! We will have a team formation
+workshop before hacking begins.
+
+What is the procedure for receiving a
+reimbursement? 
+
+See page 20 for travel reimbursement details.
+
+I still have more questions. What do I do?
+
+Use the #ask-an-organizer channel in Discord to
+direct all your questions! The organizers will
+respond to you as soon as possible. The organizers
+will be wearing red HooHacks shirt, so feel free to
+ask them any questions you may have as well. Please
+feel free to visit the organizer room, you are
+welcome to visit with any questions you may have!
+
+19
+
+08
+
+Reimbursements + Raffle
+Travel Reimbursement
+
+During the event, you can collect your reimbursement at
+the Organizer Help Desk. You must present your ID and
+Venmo/PayPal/Zelle information. The reimbursement desk
+will be open from 12:00 PM - 5:00 PM on Saturday and
+8:00 AM - 11:00 AM on Sunday.
+
+Drivers
+
+If you drove your own vehicle, on the day of the event,
+you will be asked to submit a photo of where you parked
+with the license plate visible in the photo. This
+should match the number you provide in the preregistration. If you rented a car, you will need to
+provide proof of purchase for the car you rented. If
+multiple people were in your vehicle, all must be
+present when requesting reimbursement.
+
+Train/ Bus/ Air
+
+On the day of the event, you will be asked to show
+confirmation of ticket purchase to verify your trip.
+We offer reimbursement for those who drive and fly if
+and only if they also submit a project.
+
+HooCoins + Raffle
+
+Throughout the event, we will be raffling off
+numerous incredible prizes to hackers based on the
+HooCoins you collect and the workshops you attend.
+Many workshops will have prize raffles for workshop
+attendees. At the end of the event, we will be
+raffling away and awarding prizes to hackathon
+attendees based on the HooCoins they accumulate. Earn
+more HooCoins by attending workshops + events
+throughout the hackathon!
+
+20
+
+We hope you enjoy your
+time at HooHacks 2025.
+Happy Hacking :)
