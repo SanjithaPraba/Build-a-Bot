@@ -6,6 +6,8 @@ from pydantic import BaseModel
 import pickle
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
+from typing import Optional
+
 
 # Load environment variables
 load_dotenv()
@@ -23,11 +25,11 @@ llm = ChatTogether(
 # Define the state schema (no category)
 class QueryState(BaseModel):
     question: str
-    response: str | None = None
+    response: Optional[str] = None
 
 # Step 1: Create and store embeddings from a .txt file
 def create_and_store_embedding(state: QueryState):
-    file_path = "uploaded_info.txt"
+    file_path = "faq.txt"
 
     if not os.path.exists(file_path):
         print("Text file not found.")
@@ -94,4 +96,4 @@ rag_bot = workflow.compile()
 if __name__ == "__main__":
     input_question = QueryState(question="What are HooHacks logistics?")
     response = rag_bot.invoke(input_question)
-    print("\nFinal Answer:\n", response.response)
+    print("\nFinal Answer:\n", response["response"])
