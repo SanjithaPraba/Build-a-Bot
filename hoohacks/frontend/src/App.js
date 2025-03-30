@@ -55,8 +55,8 @@ function App() {
       <div style={styles.floatingShape3}>💡</div>
 
       <div style={styles.headingOverlay}>
-        <h1 style={styles.mainHeading}>Build-a-BOT</h1>
-        <h2 style={styles.subHeading}>Ask anything about your organization 🔍</h2>
+        <h1 style={styles.mainHeading}>Built with Build-a-BOT</h1>
+        <h2 style={styles.subHeading}>Ask anything about my organization 🔍</h2>
 
         <div style={{ margin: "10px 0" }}>
           <label>
@@ -90,7 +90,7 @@ function App() {
                 if (!uploadFile) return alert("Please upload a .txt file first.");
                 const formData = new FormData();
                 formData.append("file", uploadFile);
-                const res = await fetch("http://localhost:5001/upload", {
+                const res = await fetch("http://localhost:5001/upload-faq", {
                   method: "POST",
                   body: formData,
                 });

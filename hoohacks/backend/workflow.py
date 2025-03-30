@@ -23,21 +23,19 @@ if not api_key:
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app, 
-     resources={r"/*": {
-         "origins": ["http://localhost:3000", "http://127.0.0.1:3000"],
-         "methods": ["GET", "POST", "OPTIONS"],
-         "allow_headers": ["Content-Type", "Authorization", "Accept", "Access-Control-Allow-Origin"]
-     }})
+CORS(app, resources={r"/*": {
+    "origins": ["http://localhost:3000", "http://127.0.0.1:3000"],
+    "methods": ["GET", "POST", "OPTIONS"],
+    "allow_headers": ["Content-Type", "Authorization", "Accept", "Access-Control-Allow-Origin"]
+}})
 
 # Define uploads folder and ensure it exists
 UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
-# Global variables for managing the FAQ file and new file uploads.
-# Start with the default FAQ file.
-current_faq_path = os.path.join(UPLOAD_FOLDER, "BAI_technical_project_management_handbook.txt")
+# Global path to the current .txt used for embedding
+current_faq_path = os.path.join(UPLOAD_FOLDER, "default.txt")
 
 # Initialize LLM
 llm = ChatTogether(
@@ -45,12 +43,12 @@ llm = ChatTogether(
     together_api_key=api_key,
 )
 
-# Define the state schema
+# Define LangGraph state
 class QueryState(BaseModel):
     question: str
     response: Optional[str] = None
 
-# Step 1: Create and store embeddings from a .txt file
+# Step 1: Embedding creation
 def create_and_store_embedding(state: QueryState):
     global current_faq_path
     if not os.path.exists(current_faq_path):
@@ -61,7 +59,6 @@ def create_and_store_embedding(state: QueryState):
         with open(current_faq_path, "r", encoding="utf-8") as f:
             raw_text = f.read()
 
-        # Basic paragraph-based chunking
         chunks = raw_text.split("\n\n")
         texts = [chunk.strip() for chunk in chunks if chunk.strip()]
         metadatas = [{"source": f"chunk_{i}"} for i in range(len(texts))]
@@ -78,7 +75,7 @@ def create_and_store_embedding(state: QueryState):
 
     return state
 
-# Step 2: Retrieve context from stored embeddings
+# Step 2: Retrieve context
 def retrieve_context(state: QueryState):
     try:
         with open("local_embeddings.pkl", "rb") as f:
@@ -96,7 +93,7 @@ def retrieve_context(state: QueryState):
 
     return QueryState(question=state.question, response=context)
 
-# Step 3: Generate LLM response
+# Step 3: Generate response
 def generate_response(state: QueryState):
     try:
         prompt = (
@@ -105,106 +102,74 @@ def generate_response(state: QueryState):
             f"Relevant context from the uploaded document:\n{state.response}\n\n"
             f"Please provide a clear and helpful answer based on this context."
         )
-
         final_response = llm.invoke(prompt).content.strip()
         logger.info("Generated response successfully")
     except Exception as e:
         logger.error(f"Error generating response: {str(e)}")
-        final_response = "I apologize, but I encountered an error while processing your request."
+        final_response = "Sorry, something went wrong while generating the response."
 
     return QueryState(question=state.question, response=final_response)
 
-# Build the LangGraph workflow
+# Build LangGraph
 workflow = StateGraph(QueryState)
 workflow.add_node("create_and_store_embedding", create_and_store_embedding)
 workflow.add_node("retrieve_context", retrieve_context)
 workflow.add_node("generate_response", generate_response)
-workflow.add_edge("create_and_store_embedding", "retrieve_context")
 workflow.add_edge("retrieve_context", "generate_response")
-
-# Default entry point is "retrieve_context"
 workflow.set_entry_point("retrieve_context")
 workflow.set_finish_point("generate_response")
-rag_bot = workflow.compile()
 
-# Test route
+# Routes
 @app.route('/test', methods=['GET'])
 def test_connection():
     return jsonify({"status": "ok", "message": "Backend is running!"})
 
-# Route to handle file uploads for new FAQ documents
 @app.route('/upload-faq', methods=['POST'])
 def upload_faq():
     global current_faq_path
+
     if 'file' not in request.files:
-        logger.error("No file part in the request")
-        return jsonify({"error": "No file part in the request"}), 400
+        return jsonify({"error": "No file part in request"}), 400
 
     file = request.files['file']
     if file.filename == '':
-        logger.error("No selected file")
         return jsonify({"error": "No selected file"}), 400
 
+    # Save file
     file_save_path = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
     file.save(file_save_path)
-
-    # Update global FAQ file path to the new file.
     current_faq_path = file_save_path
-    logger.info(f"New FAQ file uploaded: {current_faq_path}")
+    logger.info(f"New FAQ uploaded: {current_faq_path}")
 
-    # Change the workflow entry point to update embeddings
-    workflow.set_entry_point("create_and_store_embedding")
-    rag_bot = workflow.compile()
-    # Invoke the workflow to update embeddings (the question is irrelevant here)
-    rag_bot.invoke(QueryState(question=""))
-    
-    # Set the entry point back to retrieve_context for normal query processing
-    workflow.set_entry_point("retrieve_context")
-    rag_bot = workflow.compile()
-    
-    return jsonify({"message": "File uploaded and embeddings updated successfully!"}), 200
+    # Just generate embeddings without running full graph
+    create_and_store_embedding(QueryState(question=""))
+    return jsonify({"message": "File uploaded and embeddings updated!"}), 200
 
-# Flask route to process user queries
 @app.route('/process', methods=['POST', 'OPTIONS'])
 def process_request():
     if request.method == 'OPTIONS':
         return '', 204
-        
+
     try:
-        logger.info("Received request")
         data = request.get_json()
-        
-        if not data:
-            logger.error("No JSON data received")
-            return jsonify({"error": "No data received"}), 400
-            
-        if 'description' not in data:
-            logger.error("Missing description in request")
-            return jsonify({"error": "Missing description in request"}), 400
-            
+        if not data or 'description' not in data:
+            return jsonify({"error": "Missing description"}), 400
+
         description = data['description']
-        logger.info(f"Processing request for: {description}")
 
         rag_bot = workflow.compile()
         input_question = QueryState(question=description)
         response = rag_bot.invoke(input_question)
 
-        if not response or 'response' not in response:
-            logger.error("Invalid response from LangGraph")
-            return jsonify({"error": "Invalid response from AI model"}), 500
-        
-        # Format the response for the frontend
         results = [{
             "name": "AI Response",
             "description": response["response"],
             "web_address": "#"
         }]
-        
-        logger.info("Successfully processed request")
         return jsonify({"results": results})
-        
+
     except Exception as e:
-        logger.error(f"Error in request handling: {str(e)}")
+        logger.error(f"Error in processing: {str(e)}")
         return jsonify({"error": f"Server error: {str(e)}"}), 500
 
 if __name__ == '__main__':
