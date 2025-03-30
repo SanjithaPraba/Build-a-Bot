@@ -1,4 +1,4 @@
-## Check out our demo!: 
+## Check out our demo!: https://youtu.be/CmhgwmP31y0
 
 ## Inspiration
 College clubs, student orgs, and academic departments often struggle to stay organized and answer recurring questions, whether it’s "How do I join?", "Where’s the syllabus?", or "When are officer elections?" Most of these groups don’t have the time, budget, or technical expertise to build their own chatbot or FAQ system. We built Build-a-BOT to change that — a no-code, plug-and-play solution that empowers anyone in an academic setting to turn their raw documentation into a smart, searchable assistant in minutes.
