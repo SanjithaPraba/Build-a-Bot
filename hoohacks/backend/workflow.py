@@ -18,7 +18,6 @@ logger = logging.getLogger(__name__)
 # Load environment variables
 load_dotenv()
 api_key = os.getenv("TOGETHER_API_KEY")
-
 if not api_key:
     raise ValueError("TOGETHER_API_KEY is missing. Please check your .env file.")
 
@@ -30,6 +29,15 @@ CORS(app,
          "methods": ["GET", "POST", "OPTIONS"],
          "allow_headers": ["Content-Type", "Authorization", "Accept", "Access-Control-Allow-Origin"]
      }})
+
+# Define uploads folder and ensure it exists
+UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
+
+# Global variables for managing the FAQ file and new file uploads.
+# Start with the default FAQ file.
+current_faq_path = os.path.join(UPLOAD_FOLDER, "BAI_technical_project_management_handbook.txt")
 
 # Initialize LLM
 llm = ChatTogether(
@@ -44,14 +52,13 @@ class QueryState(BaseModel):
 
 # Step 1: Create and store embeddings from a .txt file
 def create_and_store_embedding(state: QueryState):
-    file_path = "BAI_technical_project_management_handbook.txt"
-
-    if not os.path.exists(file_path):
-        logger.error(f"FAQ file not found at {file_path}")
+    global current_faq_path
+    if not os.path.exists(current_faq_path):
+        logger.error(f"FAQ file not found at {current_faq_path}")
         return state
 
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
+        with open(current_faq_path, "r", encoding="utf-8") as f:
             raw_text = f.read()
 
         # Basic paragraph-based chunking
@@ -107,18 +114,17 @@ def generate_response(state: QueryState):
 
     return QueryState(question=state.question, response=final_response)
 
-# Build the LangGraph
+# Build the LangGraph workflow
 workflow = StateGraph(QueryState)
 workflow.add_node("create_and_store_embedding", create_and_store_embedding)
 workflow.add_node("retrieve_context", retrieve_context)
 workflow.add_node("generate_response", generate_response)
-
 workflow.add_edge("create_and_store_embedding", "retrieve_context")
 workflow.add_edge("retrieve_context", "generate_response")
 
+# Default entry point is "retrieve_context"
 workflow.set_entry_point("retrieve_context")
 workflow.set_finish_point("generate_response")
-
 rag_bot = workflow.compile()
 
 # Test route
@@ -126,7 +132,39 @@ rag_bot = workflow.compile()
 def test_connection():
     return jsonify({"status": "ok", "message": "Backend is running!"})
 
-# Flask route to handle requests
+# Route to handle file uploads for new FAQ documents
+@app.route('/upload-faq', methods=['POST'])
+def upload_faq():
+    global current_faq_path
+    if 'file' not in request.files:
+        logger.error("No file part in the request")
+        return jsonify({"error": "No file part in the request"}), 400
+
+    file = request.files['file']
+    if file.filename == '':
+        logger.error("No selected file")
+        return jsonify({"error": "No selected file"}), 400
+
+    file_save_path = os.path.join(app.config["UPLOAD_FOLDER"], file.filename)
+    file.save(file_save_path)
+
+    # Update global FAQ file path to the new file.
+    current_faq_path = file_save_path
+    logger.info(f"New FAQ file uploaded: {current_faq_path}")
+
+    # Change the workflow entry point to update embeddings
+    workflow.set_entry_point("create_and_store_embedding")
+    rag_bot = workflow.compile()
+    # Invoke the workflow to update embeddings (the question is irrelevant here)
+    rag_bot.invoke(QueryState(question=""))
+    
+    # Set the entry point back to retrieve_context for normal query processing
+    workflow.set_entry_point("retrieve_context")
+    rag_bot = workflow.compile()
+    
+    return jsonify({"message": "File uploaded and embeddings updated successfully!"}), 200
+
+# Flask route to process user queries
 @app.route('/process', methods=['POST', 'OPTIONS'])
 def process_request():
     if request.method == 'OPTIONS':
@@ -146,32 +184,24 @@ def process_request():
             
         description = data['description']
         logger.info(f"Processing request for: {description}")
+
+        rag_bot = workflow.compile()
+        input_question = QueryState(question=description)
+        response = rag_bot.invoke(input_question)
+
+        if not response or 'response' not in response:
+            logger.error("Invalid response from LangGraph")
+            return jsonify({"error": "Invalid response from AI model"}), 500
         
-        try:
-            # Process the query using the LangGraph workflow
-            
-            rag_bot = workflow.compile()
-            input_question = QueryState(question=description)
-            response = rag_bot.invoke(input_question)
-
-
-            if not response or 'response' not in response:
-                logger.error("Invalid response from LangGraph")
-                return jsonify({"error": "Invalid response from AI model"}), 500
-            
-            # Format the response for the frontend
-            results = [{
-                "name": "AI Response",
-                "description": response["response"],
-                "web_address": "#"
-            }]
-            
-            logger.info("Successfully processed request")
-            return jsonify({"results": results})
-            
-        except Exception as e:
-            logger.error(f"Error in LangGraph processing: {str(e)}")
-            return jsonify({"error": f"Error processing request: {str(e)}"}), 500
+        # Format the response for the frontend
+        results = [{
+            "name": "AI Response",
+            "description": response["response"],
+            "web_address": "#"
+        }]
+        
+        logger.info("Successfully processed request")
+        return jsonify({"results": results})
         
     except Exception as e:
         logger.error(f"Error in request handling: {str(e)}")
@@ -179,4 +209,4 @@ def process_request():
 
 if __name__ == '__main__':
     logger.info("Starting Flask server...")
-    app.run(debug=True, host='0.0.0.0', port=5001) 
+    app.run(debug=True, host='0.0.0.0', port=5001)
